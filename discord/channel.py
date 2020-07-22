@@ -33,7 +33,7 @@ from .role import Role
 from .user import User
 from .member import Member
 
-Overwrites = namedtuple('Overwrites', 'id allow deny type')
+Overwrites = namedtuple('Overwrites', 'id allow deny new_allow new_deny type')
 
 class Channel(Hashable):
     """Represents a Discord server channel.
