@@ -113,7 +113,7 @@ class Channel(Hashable):
 
         for index, overridden in enumerate(kwargs.get('permission_overwrites', [])):
             overridden_id = overridden['id']
-            self._permission_overwrites.append(Overwrites(**overridden))
+            self._permission_overwrites.append(Overwrites(overridden['id'], overridden['allow'], overridden['deny'], overridden['type']))
 
             if overridden.get('type') == 'member':
                 continue
